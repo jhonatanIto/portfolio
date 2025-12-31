@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(23, 23, 23);
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.jhonatan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 200px;
+  height: 100px;
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+.jho {
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+  width: 175px;
+  transition: 0.5s;
+}
+
+.menuTabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 400px;
+}
+button {
+  all: unset;
+}
+.tabButt {
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.4s;
+}
+.selectedButton {
+  color: rgb(26, 255, 0);
+}
+.tabButt:hover {
+  color: rgb(26, 255, 0);
+}
+.language {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  position: relative;
+}
+.languageBorder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255, 0.4);
+  width: 250px;
+  height: 250px;
+  margin-left: 100px;
+  border-radius: 100%;
+  position: absolute;
+}
+
+.langCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30px;
+  margin-top: 60px;
+  font-size: 16px;
+}
+.langSec {
+  cursor: pointer;
+  transition: 0.4s;
+}
+.langSec:hover {
+  color: rgb(26, 255, 0);
+}
