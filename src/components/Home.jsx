@@ -1,5 +1,5 @@
 import "../styles/banner.css";
-function Banner() {
+function Home() {
   return (
     <div className="bannerBody">
       <div className="oneSide">
@@ -26,13 +26,19 @@ function Banner() {
       </div>
       <div className="links">
         <a href="https://github.com/jhonatanIto">
-          <div className="linkButt">Github</div>
+          <div className="linkButt">
+            {" "}
+            <img className="github" src="src/images/github tutu.png" /> Github
+          </div>
         </a>
 
-        <div className="linkButt">Linkedin</div>
+        <div className="linkButt">
+          <img className="in" src="src/images/in.png" /> Linkedin
+        </div>
       </div>
+      <div>testando</div>
     </div>
   );
 }
 
-export default Banner;
+export default Home;

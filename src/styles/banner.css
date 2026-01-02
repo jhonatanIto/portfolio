@@ -64,7 +64,7 @@
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
-  font-size: 20px;
+  font-size: 17px;
 
   width: 300px;
 }
@@ -82,4 +82,12 @@
 .linkButt:hover {
   color: rgb(26, 255, 0);
   border-color: rgb(26, 255, 0);
+}
+.github {
+  width: 30px;
+  margin-right: 8px;
+}
+.in {
+  width: 30px;
+  margin-right: 3px;
 }
