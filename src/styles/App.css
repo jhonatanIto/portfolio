@@ -9,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-color: rgb(23, 23, 23);
   color: rgba(255, 255, 255, 0.8);
@@ -101,4 +101,17 @@ button {
 }
 .langSec:hover {
   color: rgb(26, 255, 0);
+}
+@media (max-width: 480px) {
+  .languageBorder {
+    display: none;
+  }
+  .jhonatan {
+    display: none;
+  }
+  header {
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
 }

@@ -6,6 +6,7 @@ import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Error from "./components/Error.jsx";
 import Home from "./components/Home.jsx";
+import LanguageProvider from "./contex/LanguageContex.jsx";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <LanguageProvider>
+      <RouterProvider router={router} />
+    </LanguageProvider>
   </StrictMode>
 );

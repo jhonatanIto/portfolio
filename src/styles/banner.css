@@ -9,7 +9,7 @@
 .oneSide {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 50%;
   align-items: center;
   color: white;
 }
@@ -90,4 +90,153 @@
 .in {
   width: 30px;
   margin-right: 3px;
+}
+.fullTitle {
+  margin-top: 60px;
+  font-size: 30px;
+  font-style: italic;
+  cursor: default;
+}
+.projectsContainer {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.imgCard {
+  display: block;
+  object-fit: cover;
+  width: 520px;
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.6s;
+}
+
+.projectCard {
+  position: relative;
+  width: 520px;
+  height: 388px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.projectCard:hover .cardText {
+  background-color: rgb(0, 0, 0, 0.5);
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background-color: rgb(0, 0, 0, 0.7);
+  transition: 0.5s;
+}
+.cardTitle {
+  margin-top: 20px;
+  font-size: 3rem;
+}
+.projectCard:hover .cardDescription {
+}
+.cardDescription {
+  display: none;
+  font-size: 20px;
+}
+
+/* Notebook ate 1080p*/
+@media (max-width: 2000px) {
+  .oneSide {
+    width: 67%;
+  }
+  .projectsContainer {
+    width: 90%;
+    margin-top: 30px;
+  }
+  .projectCard {
+    width: 400px;
+    height: 300px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-bottom: 200px;
+  }
+  .imgCard {
+    display: block;
+    object-fit: cover;
+    width: 400px;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.6s;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+}
+/* Tablet pequeno */
+@media (max-width: 768px) {
+}
+/* Mobile */
+@media (max-width: 480px) {
+  .projectsContainer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title {
+    font-size: 80px;
+  }
+  .oneSide {
+    width: 100%;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  .icons {
+    width: 40px;
+  }
+
+  .bannerBody {
+    margin-top: 60px;
+  }
+  .butt {
+    width: 210px;
+    height: 40px;
+    border-radius: 50px;
+  }
+  .buttNext {
+    width: 40px;
+    height: 40px;
+  }
+  .toolContainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+  .projectCard {
+    position: relative;
+    width: 360px;
+    height: 270px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 50px;
+  }
+  .imgCard {
+    display: block;
+    object-fit: cover;
+    width: 360px;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.6s;
+  }
 }

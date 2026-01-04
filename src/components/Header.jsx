@@ -1,13 +1,16 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../contex/LanguageContex";
 function Header() {
   const tabs = ["/", "About", "Projects", "Contact"];
-  const [english, setEnglish] = useState(true);
   const [currSelect, setCurrSelect] = useState("");
+  const { english, setEnglish } = useContext(LanguageContext);
 
   useEffect(() => {
     const sec = localStorage.getItem("tabs") || "/";
     setCurrSelect(sec);
+    const eng = JSON.parse(localStorage.getItem("english"));
+    setEnglish(eng);
   }, []);
 
   function tabElements(tab, key) {
@@ -54,10 +57,22 @@ function Header() {
       <div className="language">
         <div className="languageBorder">
           <div className="langCont">
-            <div onClick={() => setEnglish(true)} className="langSec">
+            <div
+              onClick={() => {
+                setEnglish(true);
+                localStorage.setItem("english", true);
+              }}
+              className="langSec"
+            >
               English
             </div>
-            <div onClick={() => setEnglish(false)} className="langSec">
+            <div
+              onClick={() => {
+                setEnglish(false);
+                localStorage.setItem("english", false);
+              }}
+              className="langSec"
+            >
               日本語
             </div>
           </div>
