@@ -15,7 +15,10 @@
   height: 300px;
   border-radius: 20px;
   background-color: rgb(61, 61, 61, 0.9);
-  transition: 0.8s;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.cardBox:hover {
+  transform: translateY(-5px);
 }
 
 .miniTitle {
