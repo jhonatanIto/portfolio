@@ -1,18 +1,28 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import "../styles/banner.css";
 import ProjectCard from "./ProjectCard";
 import { LanguageContext } from "../contex/LanguageContex";
 function Home() {
-  const { english } = useContext(LanguageContext);
+  const { english, setCurrSelect } = useContext(LanguageContext);
   return (
     <div className="bannerBody">
       <div className="oneSide">
         <div className="title">Full-stack</div>
         <div className="flex">
-          <button className="butt">Projects</button>
-          <button className="buttNext">
-            <img className="arrow" src="src/images/arrow.png" />
-          </button>
+          <Link to="/projects">
+            <button onClick={() => setCurrSelect("Projects")} className="butt">
+              Projects
+            </button>
+          </Link>
+          <Link to="/projects">
+            <button
+              onClick={() => setCurrSelect("Projects")}
+              className="buttNext"
+            >
+              <img className="arrow" src="src/images/arrow.png" />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="oneSide">

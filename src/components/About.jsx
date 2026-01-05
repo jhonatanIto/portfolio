@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "../styles/about.css";
 import { LanguageContext } from "../contex/LanguageContex";
+import eu from "../images/eu.png";
 function About() {
   const { english } = useContext(LanguageContext);
   return (
@@ -62,6 +63,7 @@ function About() {
           </p>
         </div>
       )}
+      <img className="eu" src={eu} />
     </div>
   );
 }

@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { LanguageContext } from "../contex/LanguageContex";
 function Header() {
   const tabs = ["/", "About", "Projects", "Contact"];
-  const [currSelect, setCurrSelect] = useState("");
-  const { english, setEnglish } = useContext(LanguageContext);
+  const { english, setEnglish, currSelect, setCurrSelect } =
+    useContext(LanguageContext);
 
   useEffect(() => {
     const sec = localStorage.getItem("tabs") || "/";
@@ -12,6 +12,10 @@ function Header() {
     const eng = JSON.parse(localStorage.getItem("english"));
     setEnglish(eng);
   }, []);
+
+  useEffect(() => {
+    localStorage.setItem("tabs", currSelect);
+  }, [currSelect]);
 
   function tabElements(tab, key) {
     return (
@@ -32,7 +36,7 @@ function Header() {
     <header>
       <div className="jhonatan">
         <Link to="/">
-          <div className="jho">
+          <div onClick={() => setCurrSelect("/")} className="jho">
             <div>{english === true ? "Jhonatan" : "伊藤"}</div>
             <div>{english === true ? "Ito" : "ジョナタン"}</div>
           </div>
@@ -40,9 +44,6 @@ function Header() {
       </div>
       <div className="menuTabs">
         {tabs.map((tab, key) => {
-          if (tab === "/") {
-            return <Link to="/">{tabElements(tab, key)}</Link>;
-          }
           if (tab !== "Contact") {
             return <Link to={tab}>{tabElements(tab, key)}</Link>;
           } else if (tab === "Contact") {
